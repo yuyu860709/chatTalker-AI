@@ -1,0 +1,692 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1.5;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+sub {
+    vertical-align: sub;
+}
+
+
+
+.container {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg");
+    background-position: right top, 120% 55%, -30% 20%;
+    background-repeat: no-repeat, no-repeat;
+}
+
+@media (max-width:767px) {
+    .container {
+        background-image:
+            url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home_sm.svg'),
+            url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg');
+        background-position: 40% 6%, 150% 60%;
+        background-size: 85%, 200px;
+    }
+}
+
+@media (max-width:375px) {
+    .container {
+        background-position: 35% 5%, 180% 30%;
+        background-size: 100%, 200px;
+    }
+
+}
+
+.wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+@media(max-width:767px) {
+    .wrap {
+        padding: 0px 25px;
+    }
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+    margin-bottom: 30px;
+    align-items: center;
+}
+@media (max-width:767px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 199;
+        border-bottom: 2px solid #FFD153;
+        padding: 24px 20px;
+        background-color: white;
+       padding-top: 24px;
+    }
+}
+
+@media (max-width:375px) {
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+.pay {
+    display: block;
+    background: #FF5D50;
+    border-radius: 27px;
+    border: none;
+    opacity: 1;
+    padding: 12px 32px;
+    text-decoration: none;
+    color: white;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 217px;
+}
+
+@media(max-width:767px) {
+    .banner {
+        flex-direction: column;
+        padding-top: 150px;
+        margin-bottom: 90px;
+    }
+}
+
+@media(max-width:375px) {
+    .banner {
+        margin-top: 130px;
+        padding-top: 50px;
+    }
+}
+
+.banner img {
+    width: 532px;
+    height: 532px;
+}
+
+@media(max-width:767px) {
+    .banner img {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media(max-width:375px) {
+    .banner img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.banner h2 {
+    color: #56C4C5;
+    font-size: 18px;
+    margin-bottom: 8px;
+    line-height: 26px;
+}
+
+@media(max-width:375px) {
+    .banner h2 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.banner h3 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 70px;
+    margin-bottom: 16px;
+}
+
+@media(max-width:375px) {
+    .banner h3 {
+        font-size: 32px;
+        line-height: 46px;
+    }
+}
+
+.banner h4 {
+    font-size: 18px;
+    line-height: 29px;
+}
+
+@media(max-width:375px) {
+    .banner h4 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.platform h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 46px;
+    margin-bottom: 48px;
+}
+
+.platform_type {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+
+@media(max-width:375px) {
+    .platform_type {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.platform_type li {
+    text-align: center;
+    width: 23%;
+}
+
+@media(max-width:375px) {
+    .platform_type li {
+        width: 70%;
+        margin-bottom: 24px;
+    }
+}
+
+.platform_type img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 24px;
+}
+
+.platform_type h3 {
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.platform_type p {
+    color: #747474;
+    padding-left: 8px;
+    padding-right: 8px;
+    line-height: 24px;
+}
+
+.role {
+    margin-bottom: 100px;
+
+}
+
+.role h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 46px;
+    margin-bottom: 16px;
+}
+
+.role_p {
+    text-align: center;
+    font-size: 20px;
+    line-height: 29px;
+    margin-bottom: 48px;
+}
+
+.role_card {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:767px) {
+    .role_card {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:375px) {
+    .role_card {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+}
+
+.role_card li {
+    width: 24%;
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px #00000014;
+}
+
+@media(max-width:767px) {
+    .role_card li {
+        width: 48%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:375px) {
+    .role_card li {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+.role_card img {
+    width: unset;
+    border-radius: 12px 12px 0px 0px;
+    background-color: white;
+}
+
+.role_text {
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.role_text h2 {
+    font-size: 16px;
+    color: #56C4C5;
+    font-weight: bold;
+}
+
+.role_text p {
+    font-size: 16px;
+    color: #221E1F;
+}
+.client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+@media (max-width:767px) {
+    .client {
+        flex-direction: column-reverse;
+        width: 100%;
+        margin: 0 0 20px;
+    }
+}
+
+.client_item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    flex-shrink: 1;
+    margin-bottom: 47px;
+    margin-right: 28px;
+}
+
+@media (max-width:767px) {
+    .client_item {
+        width: 90%;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width:375px) {
+    .client_item {
+        width: 100%;
+    }
+}
+.client_item li {
+    width: 40%;
+    padding: 32px 32px 48px;
+    border: none;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+}
+
+@media (max-width:767px) {
+    .client_item li {
+        width: 70%;
+        margin-bottom: 50px;
+    }
+    .target{
+        margin-left: 70px;
+    }
+    .robot{
+        margin-left: 30px;
+    }
+    .chat{
+        margin-left: 70px;
+    }
+    .group{
+        margin-left:30px;
+    }
+}
+
+@media (max-width:375px) {
+    .client_item li {
+        width: 100%;
+        margin: 0 0 20px 30px;
+    }
+}
+
+.item_img {
+    width: 86px;
+    height: 86px;
+    padding: 17px;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 50%;
+    margin-bottom: 24px;
+}
+
+.client_item img {
+    width: 52px;
+    height: 52px;
+}
+
+.client_item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 26px;
+    color: #221E1F;
+    margin-bottom: 16px;
+}
+
+.client_item p {
+    font-size: 16px;
+    color: #221E1F;
+    line-height: 1.5;
+}
+
+.target {
+    margin-right: 47px;
+    margin-bottom: 28px;
+}
+
+.robot {
+    margin-bottom: 28px;
+}.role h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 46px;
+    margin-bottom: 16px;
+}
+
+.role_p {
+    text-align: center;
+    font-size: 20px;
+    line-height: 29px;
+    margin-bottom: 48px;
+}
+.role_card {
+    display: f
+}
+.chat {
+    margin-right: 47px;
+}
+.client_text {
+    width: 50%;
+}
+@media (max-width:767px) {
+    .client_text {
+        text-align: center;
+        width: 100%;
+        animation: flex-start; 
+        margin-bottom: 32px;
+    }
+}
+@media (max-width:375px) {
+    .client_text {
+        margin-left: 0px;
+        width: 90%;
+    }
+}
+.client_text h2 {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 46px;
+    margin-bottom: 16px;
+    color: #221E1F;
+}
+
+@media (max-width:375px) {
+    .client_text h2 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+}
+
+.client_text p {
+    font-size: 18px;
+    color: #221E1F;
+    margin-bottom: 24px;
+    line-height: 24px;
+}
+@media (max-width:375px) {
+    .client_text p {
+        font-size: 12px;
+    }
+}
+
+.client_text a{
+    background-color: #56C4C5;
+    display: inline-block;
+    text-align: center;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 22px;
+    color: white;
+    text-decoration: none;
+    width: 128px;
+}
+
+.praise {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg");
+    background-repeat: no-repeat;
+    background-size: 10%;
+    padding-left: 70px;
+    padding-right:70px;;
+
+}
+
+@media (width:767px) {
+    .praise {
+        background-image: none;
+    }
+
+}
+
+@media (width:375px) {
+    .praise {
+        background-image: none;
+    }
+
+}
+
+.praise h2 {
+    font-size: 32px;
+    line-height: 46px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 104px;
+}
+
+.praise_item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 134px;
+}
+@media (max-width:767px) {
+    .praise_item {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+}
+
+.praise_item li {
+    width: 32%;
+    position: relative;
+    border-radius: 12px;
+    padding: 48px 32px 24px 32px;
+    box-shadow: 0px 2px 10px #00000014;
+    background-color: white;
+}
+@media (max-width:767px) {
+    .praise_item li {
+        width: 70%;
+        margin-bottom: 80px;
+    }
+}
+@media (max-width:375px) {
+    .praise_item li {
+        width: 90%;
+        margin-bottom: 80px;
+    }
+}
+.praise_item>li>img {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: -60px;
+    border-radius: 50%;
+}
+
+.praise_item p {
+    padding-bottom: 24px;
+    color: #221E1F;
+    line-height: 24px;
+    border-bottom: 2px solid #E5E4E2;
+    margin-bottom: 28px;
+}
+
+.praise_item h3 {
+    color: #221E1F;
+    line-height: 24px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.comment_start {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:767px) {
+    .comment_start {
+        display: block;
+    }
+
+    .comment_start span {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.footer {
+    height: 503px;
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/home_footer.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 260px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer h3 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 48px;
+}
+
+.footer a {
+    display: inline-block;
+    background: #56C4C5;
+    border-radius: 27px;
+    border: none;
+    opacity: 1;
+    padding: 12px 32px;
+    text-decoration: none;
+    color: white;
+    width: 128px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.footer p {
+    background-color: #F5F5F5;
+    padding: 16px 0;
+    text-align: center;
+    font-size: 16px;
+}
