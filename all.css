@@ -487,7 +487,7 @@ sub {
     margin-bottom: 48px;
 }
 .role_card {
-    display: f
+    display: flex;
 }
 .chat {
     margin-right: 47px;
